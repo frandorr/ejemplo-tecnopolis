@@ -4,19 +4,8 @@ class MyController < Ramaze::Controller
   map '/'
   helper(:xhtml)
   def index
-    %|<form action="/plato_respuesta" method="post">
-        <fieldset>
-            <legend> Plato </legend>
-            <div>
 
-                <label for="plato">Plato:</label>
-                <input id="plato" name="plato" type="text" />
-                <br/>
-                <input type="submit" value="Pedir plato" />
-            </div>
-        </fieldset>
-    </form>|
- end
+  end
 
  def plato_respuesta
    puts "Hola"
