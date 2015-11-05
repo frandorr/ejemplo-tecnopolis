@@ -67,10 +67,10 @@ class MainController < Controller
      sleep(5.0)
      system "clear"
      puts "(Chef)- Le agrego un poco de pimienta... un poco de sal"
-     sleep(2.0)
+     sleep(1.0)
      puts "(Chef) mmmm, que buena pinta tiene"
      sleep(2.0)
-     puts "(Chef) Y ahora le voy a dar mi gran toque... el elemento X y listo!"
+     puts "(Chef) Y ahora le voy a dar mi gran toque...LISTO"
      sleep(4.0)
      system "clear"
      puts "(Chef) Mozo! Venga a buscar el plato para los chicos!!"
@@ -81,6 +81,19 @@ class MainController < Controller
      system "clear"
 
      suckr = ImageSuckr::GoogleSuckr.new
+    #  si no hay internet_
+    # imagen = suckr.get_image_url({"q" => plato})
+    #  case plato
+    #   when "Milanga con fritas"
+    #     imagen = "images/milanga.jpg"
+    #   when "Pollo al curry"
+    #     imagen = "images/pollo.jpg"
+    #   when "Pizza"
+    #     imagen = "images/pizza.jpg"
+    #   when "Pancho"
+    #     imagen = "images/pancho.jpg"
+    #  end
+
      imagen = suckr.get_image_url({"q" => plato})
      return imagen
    end
